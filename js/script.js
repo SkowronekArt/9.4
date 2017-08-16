@@ -52,16 +52,31 @@ ma dać wynik:
 Dla ambitnych: na każdym z poziomów dodaj spacje tak, aby choinka stała prosto.
 
 */
+var treeHigh = prompt("ile?", "9");
+
+function drawTree(treeHigh) {
+	for (var i = 1; i < treeHigh; i++) {
+		var star = " ";
+		for (var j = 0; j < i; j++) {
+			var stars = star += "*";
+		}
+		console.log(stars);
+	}
+	
+}
+console.log(drawTree(treeHigh));
+
+/*
 var i,
     j, 
-    TreeHigh = prompt("ile", "9");
+    treeHigh = prompt("ile", "9");
 
 function drawTree(i) {
-    for ( var i = 1 ; i < TreeHigh ; i++) {
+    for (var i = 1; i < treeHigh; i++) {
  
 	 	var star = " ";
 
- 		for  ( var j = 0 ; j < i ; j++) {
+ 		for (var j = 0; j < i; j++) {
  			var stars = star += '* ';
  		}
 
@@ -71,3 +86,4 @@ function drawTree(i) {
 }
 
 console.log(drawTree(i));
+*/
