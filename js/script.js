@@ -64,34 +64,47 @@ Miej na uwadze jedną prawidłowość: nazwa zmiennej jest przypadkowo zbieżna 
 
 
             rev 2 result:
-*/
+
 
 var treeHigh = prompt("ile", "3")
 
 function drawTree(n) {
     for (var i = 1; i <= n; i++) {
-        var star = "";
+        var star = " ";
         for (var j = 0; j < i; j++) {
-            var star = star += "*";
+            var star = star += "* ";
         }
         console.log(star);
     }
 
-    return "*";
+    return " a ";
 }
 drawTree(treeHigh);
 
 
-//                  WORKS LIKE CHARM!!!!!!!!!               
+/*          rev 3:
 
 
-/*
-var n = prompt("ile", "3")
-for (var i = 1; i <= n; i++) {
-    var star = "";
-    for (var j = 0; j < i; j++) {
-        var star = star += "*";
-    }
-    console.log(star);
-}
+@4) nie jest obowiązkiem, by funkcja coś zwracała.
+Często po nazwie funkcji można wykminić czy coś będzie zwracać czy też nie.
+Nazwa drawTree raczej nie będzie nic zwracała, stąd return jest zbędny ;-)
+
+6) Dodaj średnik na końcu prompta.
+7) var star = star += "*"; - nie chcemy definiować nowej zmiennej.
+Raczej chcemy korzystać z tej co jest już wyżej.
+Stąd całość do pierwszego znaku = można usunąć.
+
+
+            rev 3 result:
 */
+function drawTree(n) {
+    for (var i = 0; i < n; i++) {
+        var star = "*";
+        for (var j = 0; j < i; j++) {
+            star += "*";
+        }
+        console.log(star);
+    }
+}
+var treeHigh = prompt("ile", "3");
+drawTree(treeHigh);
